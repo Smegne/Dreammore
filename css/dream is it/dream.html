@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream More Company - Digital Growth & Creative Training</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (Inspired by Evangadi's clean and modern style) -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #007bff !important;
+        }
+        .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1920x1080/?digital-agency');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 30px;
+            font-weight: 500;
+        }
+        .btn-outline-light {
+            border-color: white;
+            color: white;
+            padding: 10px 30px;
+            font-weight: 500;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .service-card, .training-card, .team-card {
+            border: none;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover, .training-card:hover, .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .service-card i, .training-card i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .why-choose-us, .pricing-section, .portfolio-section {
+            background-color: #f9fafb;
+            padding: 60px 0;
+        }
+        .testimonial-section, .team-section {
+            padding: 60px 0;
+        }
+        .contact-section {
+            background-color: #1a252f;
+            color: white;
+            padding: 60px 0;
+        }
+        .form-control {
+            border-radius: 5px;
+            padding: 12px;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+        .pricing-table th, .pricing-table td {
+            vertical-align: middle;
+            padding: 15px;
+        }
+        .portfolio-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .portfolio-link:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        footer {
+            background-color: #121212;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            .hero-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <!-- Google Fonts (Inter for clean typography like Evangadi) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar (Inspired by Evangadi's clean and light navbar) -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dream More</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#training">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Evangadi-style with centered text and CTAs) -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Your Partner in Digital Growth & Creative Training</h1>
+            <p>Fueling Your Business Dreams – Empowering Brands, Transforming Careers</p>
+            <div>
+                <a href="#contact" class="btn btn-primary me-3">Get a Quote</a>
+                <a href="#contact" class="btn btn-outline-light">Enroll in a Course</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Solutions -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Our Business Solutions</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+Via                    <div class="card service-card">
+                        <div class="card-body">
+                            <i class="fas fa-palette"></i>
+                            <h5 class="card-title">Logo Design</h5>
+                            <p class="card-text">Unique and memorable logos tailored to your brand identity, delivered with a branding guide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body">
+                            <i class="fas fa-laptop-code"></i>
+                            <h5 class="card-title">Website Development</h5>
+                            <p class="card-text">SEO-friendly, fast, and mobile-ready websites built with HTML, CSS, JS, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body">
+                            <i class="fas fa-bullhorn"></i>
+                            <h5 class="card-title">Advertising & Campaigns</h5>
+                            <p class="card-text">Boost visibility with targeted ads on Facebook, Instagram, Google, and YouTube.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section id="training" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Training Programs</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card training-card">
+                        <div class="card-body">
+                            <i class="fas fa-paint-brush"></i>
+                            <h5 class="card-title">Graphic Design</h5>
+                            <p class="card-text">Master Photoshop, Illustrator, and Canva for branding and social media visuals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card training-card">
+                        <div class="card-body">
+                            <i class="fas fa-video"></i>
+                            <h5 class="card-title">Video Editing</h5>
+                            <p class="card-text">Learn Premiere Pro, After Effects, and mobile apps for professional video content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card training-card">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line"></i>
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">Gain expertise in SEO, social media, Google Ads, and email marketing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card training-card">
+                        <div class="card-body">
+                            <i class="fas fa-code"></i>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Build responsive websites with HTML, CSS, JavaScript, WordPress, and React.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Pricing</h2>
+            <div class="table-responsive">
+                <table class="table table-striped pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Description</th>
+                            <th>Price (ETB)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Logo Design</td>
+                            <td>Custom logo + branding guide</td>
+                            <td>3,500</td>
+                        </tr>
+                        <tr>
+                            <td>Website Development</td>
+                            <td>Responsive full website</td>
+                            <td>12,000</td>
+                        </tr>
+                        <tr>
+                            <td>Ad Campaign Setup</td>
+                            <td>Social/Google ad management</td>
+                            <td>6,500</td>
+                        </tr>
+                        <tr>
+                            <td>Graphic Design Training</td>
+                            <td>6-week course with projects</td>
+                            <td>4,000</td>
+                        </tr>
+                        <tr>
+                            <td>Video Editing Training</td>
+                            <td>6-week course + Adobe + mobile tools</td>
+                            <td>4,500</td>
+                        </tr>
+                        <tr>
+                            <td>Digital Marketing Training</td>
+                            <td>SEO, SMM, Google Ads + live tasks</td>
+                            <td>4,000</td>
+                        </tr>
+                        <tr>
+                            <td>Web Dev Training</td>
+                            <td>8-week course from HTML to React</td>
+                            <td>5,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Our Portfolio</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Logos</h5>
+                    <p>ShineTech, EduSmart, BDU Market</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Web Projects</h5>
+                    <p><a href="https://sim26.netlify.app" class="portfolio-link" target="_blank">sim26.netlify.app</a></p>
+                    <p><a href="https://liveshare.kesug.com" class="portfolio-link" target="_blank">liveshare.kesug.com</a></p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Ad Campaigns</h5>
+                    <p>FreshHub, Zena Store Ethiopia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card team-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Abebe Mekonnen</h5>
+                            <p class="card-text">Founder & CEO<br>10+ years in branding and digital leadership</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card team-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Smegn Destew</h5>
+                            <p class="card-text">Full Stack Dev & Trainer<br>Expert in HTML, React, Node.js, PHP, MySQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card team-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Almaz Kifle</h5>
+                            <p class="card-text">Lead Designer<br>Specialist in Adobe tools, branding and design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card team-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Yosef Tadesse</h5>
+                            <p class="card-text">Marketing Director<br>Pro in Meta Ads, Google Ads, content strategy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Dream More?</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-certificate fa-2x mb-3" style="color: #007bff;"></i>
+                    <h5>Certified Instructors</h5>
+                    <p>Learn from experienced professionals with industry-recognized certifications.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-briefcase fa-2x mb-3" style="color: #007bff;"></i>
+                    <h5>Real-World Projects</h5>
+                    <p>Gain hands-on experience with client projects and practical assignments.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-user-graduate fa-2x mb-3" style="color: #007bff;"></i>
+                    <h5>Mentorship & Internships</h5>
+                    <p>Receive one-on-one guidance and internship opportunities.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-globe fa-2x mb-3" style="color: #007bff;"></i>
+                    <h5>All-in-One Solutions</h5>
+                    <p>Business branding and personal training under one roof.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"Dream More built our brand from scratch. Everything was flawless."</p>
+                            <h6 class="card-subtitle text-muted">— Ravi S., Business Owner</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"I landed my first freelance job 2 months after the course!"</p>
+                            <h6 class="card-subtitle text-muted">— Puja M., Trainee</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Contact Information</h4>
+                    <p><strong>Phone:</strong> +251 911 234 567</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@dreammorecompany.com" style="color: #007bff;">info@dreammorecompany.com</a></p>
+                    <p><strong>Location:</strong> Bahir Dar, Ethiopia</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/dreammorecompany" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/dreammorecompany" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/dreammore" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@dreammorecompany" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form id="contactForm" action="https://dreammorecompany.com/enroll" method="POST">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Select Service or Training</label>
+                            <select class="form-select" id="service" required>
+                                <option value="" disabled selected>Choose an option</option>
+                                <option value="logo-design">Logo Design</option>
+                                <option value="website-development">Website Development</option>
+                                <option value="ad-campaign">Ad Campaign Setup</option>
+                                <option value="graphic-design">Graphic Design Training</option>
+                                <option value="video-editing">Video Editing Training</option>
+                                <option value="digital-marketing">Digital Marketing Training</option>
+                                <option value="web-development">Web Development Training</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="notes" class="form-label">Additional Notes</label>
+                            <textarea class="form-control" id="notes" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Evangadi-style minimal footer) -->
+    <footer>
+        <p>© 2025 Dream More Company. All rights reserved.</p>
+        <p>Prepared by Smegn Destew</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const notes = document.getElementById('notes').value;
+
+            if (!fullName || !email || !phone || !service) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            console.log({
+                fullName,
+                email,
+                phone,
+                service,
+                notes
+            });
+
+            alert('Thank you for your submission! We will respond within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

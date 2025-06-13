@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream More Company - Digital Growth & Creative Training</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #2C2E3E;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .navbar {
+            background-color: #2C2E3E;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(44, 46, 62, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+        .navbar-brand:hover img {
+            transform: rotate(360deg);
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #E66B2B !important;
+        }
+        .nav-link {
+            color: #FFFFFF !important;
+            font-weight: 500;
+            margin-left: 25px;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #E66B2B !important;
+        }
+        .hero-section {
+            background: url('../images/chatdream.png') center/cover no-repeat;
+            color: #FFFFFF;
+            height: 200vh;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(44, 46, 62, 0.7), rgba(230, 107, 43, 0.3));
+            z-index: 1;
+            animation: gradientShift 10s infinite alternate;
+        }
+        @keyframes gradientShift {
+            from { background: linear-gradient(135deg, rgba(44, 46, 62, 0.7), rgba(230, 107, 43, 0.3)); }
+            to { background: linear-gradient(135deg, rgba(230, 107, 43, 0.3), rgba(44, 46, 62, 0.7)); }
+        }
+        .hero-section > * {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero-section p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        .register-section .container {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+            padding: 60px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(44, 46, 62, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .register-section .container h2 {
+            background: linear-gradient(135deg, #2C2E3E 0%, #E66B2B 100%);
+            color: #FFFFFF;
+            padding: 60px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(44, 46, 62, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-orange {
+            background-color: #E66B2B;
+            border: none;
+            color: #FFFFFF;
+            padding: 12px 35px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(230, 107, 43, 0.4);
+        }
+        .btn-orange:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(230, 107, 43, 0.6);
+            background-color: #d65a1f;
+        }
+        .btn-outline-light {
+            border-color: #FFFFFF;
+            color: #FFFFFF;
+            padding: 12px 35px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+        }
+        .btn-outline-light:hover {
+            background-color: #E66B2B;
+            border-color: #E66B2B;
+            color: #FFFFFF;
+        }
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #2C2E3E;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #E66B2B;
+            border-radius: 2px;
+        }
+        .card-service, .card-training {
+            background: #FFFFFF;
+            border: 1px solid #E66B2B;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 55px rgba(11, 11, 12, 0.1);
+        }
+        .card-service:hover, .card-training:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(44, 46, 62, 0.1);
+        }
+        .card-service i, .card-training i {
+            font-size: 2.5rem;
+            color: #E66B2B;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .card-service:hover i, .card-training:hover i {
+            transform: rotate(15deg);
+        }
+        .card-training .apply-btn {
+            display: none;
+            margin-top: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+        .card-training:hover .apply-btn {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .portfolio-section, .why-choose-us {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+        }
+        .testimonial-section {
+            padding: 80px 0;
+            background-color: #F9FAFB;
+        }
+        .contact-section {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+            padding: 80px 0;
+        }
+        .form-control {
+            border-radius: 10px;
+            padding: 15px;
+            border-color: #D3D3D3;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #E66B2B;
+            box-shadow: 0 0 8px rgba(230, 107, 43, 0.3);
+        }
+        .social-icons a {
+            color: #FFFFFF;
+            margin: 0 15px;
+            font-size: 1.8rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #E66B2B;
+            transform: scale(1.2);
+        }
+        footer {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 1rem;
+        }
+         /* Stats Cards Styling */
+        .stats-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #FFFFFF 70%, #F9FAFB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-cards {
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .stats-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 30px 60px rgba(44, 46, 62, 0.2);
+            transition: all 0.5s ease;
+            flex: 1;
+            margin: 0 15px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .stats-card:nth-child(1) {
+            background-color: #E66B2B;
+            color: #FFFFFF;
+        }
+        .stats-card:nth-child(2) {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+        }
+        .stats-card:nth-child(3) {
+            background-color: #E66B2B;
+            color: #FFFFFF;
+        }
+        .stats-card:nth-child(4) {
+            background-color: #2C2E3E;
+            color: #FFFFFF;
+        }
+        .stats-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 30px 60px rgba(44, 46, 62, 0.2);
+        }
+        .stats-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .stats-card .counter {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        @media (max-width: 767px) {
+            .stats-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .stats-card {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+        }
+        /* Register Section Styling */
+        .register-section {
+            padding: 80px 0;
+            background-color: #F9FAFB;
+            text-align: center;
+            position: relative;
+        }
+        .register-section h2 {
+            font-size: 2.5rem;
+            color: #2C2E3E;
+            margin-bottom: 25px;
+        }
+        .register-section p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+        /* Team Section Styling with Animations */
+        .team-section {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .team-card {
+            width: 100%;
+            max-width: 280px;
+            background: #FFFFFF;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(44, 46, 62, 0.1);
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.6s ease;
+        }
+        .team-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .team-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+        }
+        .team-card:hover img {
+            filter: brightness(0.9);
+        }
+        .team-card .card-content {
+            padding: 20px;
+            text-align: center;
+            background: #F9FAFB;
+        }
+        .team-card .card-content h5 {
+            color: #2C2E3E;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .team-card .card-content p {
+            color: #666;
+            font-size: 1rem;
+        }
+        .team-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 250px;
+            background: rgba(230, 107, 43, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .team-card:hover .overlay {
+            opacity: 1;
+        }
+        .team-card .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+        .team-card .social-icons a {
+            color: #FFFFFF;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+        .team-card .social-icons a:hover {
+            transform: scale(1.3);
+        }
+        /* Modal Styling */
+        .modal-content {
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            background: #FFFFFF;
+        }
+        .modal-header {
+            border-bottom: none;
+        }
+        .modal-title {
+            color: #2C2E3E;
+            font-weight: 700;
+        }
+        .modal-body .form-control {
+            border-color: #D3D3D3;
+            border-radius: 10px;
+        }
+        .modal-body .btn-orange {
+            width: 100%;
+            margin-top: 15px;
+        }
+        .modal-body .forgot-password,
+        .modal-body .sign-up,
+        .modal-body .login-link {
+            color: #E66B2B;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .modal-body .forgot-password:hover,
+        .modal-body .sign-up:hover,
+        .modal-body .login-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .team-card {
+                max-width: 100%;
+            }
+            .register-section h2 {
+                font-size: 2rem;
+            }
+            .register-section p {
+                font-size: 1.1rem;
+            }
+            #enrollModal .modal-dialog {
+                margin: 10px;
+            }
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+        /* Animation Styles */
+        .animated-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .animated-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="../images/dream.jpg" alt="Dream More Logo" width="60" height="60"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#training">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn btn-orange" data-bs-toggle="modal" data-bs-target="#loginModal">Sign In</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" value="smegndestew53@gmail.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" value="********" required>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <button type="submit" class="btn btn-orange">Login</button>
+                        <p class="mt-3"><a href="#" class="sign-up" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Don't have an account? Sign Up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Join The Network</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-4">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter your Email Address" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="********" required>
+                        </div>
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">I agree to the privacy policy and terms of service</label>
+                        </div>
+                        <button type="submit" class="btn btn-orange">Agree and Join</button>
+                        <p class="mt-3"><a href="#" class="login-link" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Already have an account? Log in</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enroll Modal -->
+    <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enrollModalLabel">Enroll in a Course</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group mb-4">
+                            <label for="enrollFullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="enrollFullName" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="enrollEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="enrollEmail" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="enrollPhone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="enrollPhone" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="enrollCourse" class="form-label">Course Selection</label>
+                            <select class="form-control" id="enrollCourse" required>
+                                <option value="" disabled selected>Select a Course</option>
+                                <option value="graphic-design">Graphic Design</option>
+                                <option value="video-editing">Video Editing</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="web-development">Web Development</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-orange mt-4">Submit Enrollment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section animated-section">
+        <div class="container">
+            <h1>Your Partner in Digital Growth & Creative Training</h1>
+            <p>Fueling Your Business Dreams – Empowering Brands, Transforming Careers</p>
+            <a href="#contact" class="btn btn-orange me-4">Get a Quote</a>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll in a Course</button>
+        </div>
+    </section>
+
+    <!-- Stats Cards Section -->
+    <section class="stats-section animated-section">
+        <div class="container">
+            <div class="stats-cards">
+                <div class="stats-card">
+                    <h3>Students</h3>
+                    <div class="counter" data-target="500">0</div>
+                </div>
+                <div class="stats-card">
+                    <h3>Graduates</h3>
+                    <div class="counter" data-target="120">0</div>
+                </div>
+                <div class="stats-card">
+                    <h3>Award-Winning</h3>
+                    <div class="counter" data-target="15">0</div>
+                </div>
+                <div class="stats-card">
+                    <h3>Faculties</h3>
+                    <div class="counter" data-target="10">0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5 animated-section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="lead">We are a creative and digital solutions company dedicated to helping businesses stand out and future professionals thrive. Whether you're a startup needing a brand identity or an aspiring designer eager to learn, Dream More Company is your go-to partner.</p>
+                    <h3 class="mt-4" style="color: #2C2E3E;">Mission</h3>
+                    <p>To empower individuals and businesses through innovative digital solutions and high-quality creative training, fostering growth and success in a dynamic global market.</p>
+                    <h3 class="mt-4" style="color: #2C2E3E;">Vision</h3>
+                    <p>To be a leading force in digital transformation and creative education, recognized worldwide for excellence, innovation, and community impact by 2030.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="../images/banner.jpg" alt="Creative Team" class="img-fluid rounded shadow-sm" style="max-width: 100%; height: auto; border: 5px solid #E66B2B;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Solutions -->
+    <section id="services" class="py-5 animated-section">
+        <div class="container">
+            <h2 class="section-title">Our Business Solutions</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card card-service">
+                        <div class="card-body">
+                            <i class="fas fa-palette"></i>
+                            <h5 class="card-title">Logo Design</h5>
+                            <p class="card-text">Unique and memorable logos tailored to your brand identity, delivered with a branding guide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-service">
+                        <div class="card-body">
+                            <i class="fas fa-laptop-code"></i>
+                            <h5 class="card-title">Website Development</h5>
+                            <p class="card-text">SEO-friendly, fast, and mobile-ready websites built with HTML, CSS, JS, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-service">
+                        <div class="card-body">
+                            <i class="fas fa-bullhorn"></i>
+                            <h5 class="card-title">Advertising & Campaigns</h5>
+                            <p class="card-text">Boost visibility with targeted ads on Facebook, Instagram, Google, and YouTube.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Programs -->
+    <section id="training" class="py-5 bg-light animated-section">
+        <div class="container">
+            <h2 class="section-title">Our Training Programs</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-paint-brush"></i>
+                            <h5 class="card-title">Graphic Design</h5>
+                            <p class="card-text">Master Photoshop, Illustrator, and Canva for branding and social media visuals.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-video"></i>
+                            <h5 class="card-title">Video Editing</h5>
+                            <p class="card-text">Learn Premiere Pro, After Effects, and mobile apps for professional video content.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-chart-line"></i>
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">Gain expertise in SEO, social media, Google Ads, and email marketing.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card card-training">
+                        <div class="card-body">
+                            <i class="fas fa-code"></i>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Build responsive websites with HTML, CSS, JavaScript, WordPress, and React.</p>
+                        </div>
+                        <button class="btn btn-orange apply-btn" data-bs-toggle="modal" data-bs-target="#enrollModal">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section animated-section">
+        <div class="container">
+            <h2 class="section-title">Our Portfolio</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Logos</h5>
+                    <p>ShineTech, EduSmart, BDU Market</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Web Projects</h5>
+                    <p><a href="https://sim26.netlify.app" style="color: #E66B2B;" target="_blank">sim26.netlify.app</a></p>
+                    <p><a href="https://liveshare.kesug.com" style="color: #E66B2B;" target="_blank">liveshare.kesug.com</a></p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Ad Campaigns</h5>
+                    <p>FreshHub, Zena Store Ethiopia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Now Section -->
+    <section class="register-section animated-section">
+        <div class="container">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join our next training session and unlock your potential with expert-led courses. Enroll today to secure your spot!</p>
+            <button class="btn btn-orange" data-bs-toggle="modal" data-bs-target="#enrollModal">Register Now</button>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section animated-section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-container">
+                <div class="team-card">
+                    <img src="../images/abebe.jpg" alt="Abebe Mekonnen">
+                    <div class="overlay">
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://portfolio.com" target="_blank"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h5>Abebe Mekonnen</h5>
+                        <p>Founder & CEO<br>10+ years in branding and digital leadership</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="../images/smegn.jpg" alt="Smegn Destew">
+                    <div class="overlay">
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://smegndestewportfolio.vercel.app/" target="_blank"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h5>Smegn Destew</h5>
+                        <p>Full Stack Dev & Trainer<br>Expert in HTML, React, Node.js, PHP, MySQL</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://source.unsplash.com/random/250x200/?person3" alt="Almaz Kifle">
+                    <div class="overlay">
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://portfolio.com" target="_blank"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h5>Almaz Kifle</h5>
+                        <p>Lead Designer<br>Specialist in Adobe tools, branding and design</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <img src="https://source.unsplash.com/random/250x200/?person4" alt="Yosef Tadesse">
+                    <div class="overlay">
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://t.me" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://portfolio.com" target="_blank"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h5>Yosef Tadesse</h5>
+                        <p>Marketing Director<br>Pro in Meta Ads, Google Ads, content strategy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="why-choose-us animated-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Dream More?</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-certificate fa-3x mb-3" style="color: #E66B2B;"></i>
+                    <h5>Certified Instructors</h5>
+                    <p>Learn from experienced professionals with industry-recognized certifications.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-briefcase fa-3x mb-3" style="color: #E66B2B;"></i>
+                    <h5>Real-World Projects</h5>
+                    <p>Gain hands-on experience with client projects and practical assignments.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-user-graduate fa-3x mb-3" style="color: #E66B2B;"></i>
+                    <h5>Mentorship & Internships</h5>
+                    <p>Receive one-on-one guidance and internship opportunities.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center">
+                    <i class="fas fa-globe fa-3x mb-3" style="color: #E66B2B;"></i>
+                    <h5>All-in-One Solutions</h5>
+                    <p>Business branding and personal training under one roof.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonial-section animated-section">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"Dream More built our brand from scratch. Everything was flawless."</p>
+                            <h6 class="card-subtitle text-muted">— Ravi S., Business Owner</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"I landed my first freelance job 2 months after the course!"</p>
+                            <h6 class="card-subtitle text-muted">— Puja M., Trainee</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section animated-section">
+        <div class="container">
+            <h2 class="section-title" style="color: #FFFFFF;">Get in Touch</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Contact Information</h4>
+                    <p><strong>Phone:</strong> +251 911 234 567</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@dreammorecompany.com" style="color: #E66B2B;">info@dreammorecompany.com</a></p>
+                    <p><strong>Location:</strong> Bahir Dar, Ethiopia</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/dreammorecompany" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/dreammorecompany" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/dreammore" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@dreammorecompany" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form id="contactForm" action="https://dreammorecompany.com/enroll" method="POST">
+                        <div class="mb-4">
+                            <label for="fullName" class="form-label text-white">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label text-white">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone" class="form-label text-white">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="form-label text-white">Select Service or Training</label>
+                            <select class="form-select" id="service" required>
+                                <option value="" disabled selected>Choose an option</option>
+                                <option value="logo-design">Logo Design</option>
+                                <option value="website-development">Website Development</option>
+                                <option value="ad-campaign">Ad Campaign Setup</option>
+                                <option value="graphic-design">Graphic Design Training</option>
+                                <option value="video-editing">Video Editing Training</option>
+                                <option value="digital-marketing">Digital Marketing Training</option>
+                                <option value="web-development">Web Development Training</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="notes" class="form-label text-white">Additional Notes</label>
+                            <textarea class="form-control" id="notes" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-orange">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Dream More Company. All rights reserved.</p>
+        <p>Prepared by Smegn Destew</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Custom JavaScript for Team Animation and Counters -->
+    <script>
+        document.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.animated-section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight - 100 && !section.classList.contains('visible')) {
+                    section.classList.add('visible');
+                }
+            });
+
+            const teamSection = document.querySelector('.team-section');
+            const teamCards = document.querySelectorAll('.team-card');
+            const rect = teamSection.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && !teamSection.classList.contains('animated')) {
+                teamCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 250);
+                });
+                teamSection.classList.add('animated');
+            }
+
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const updateCount = () => {
+                    const count = +counter.innerText.replace('+', '');
+                    const increment = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment) + (target > 99 ? '+' : '');
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target + (target > 99 ? '+' : '');
+                    }
+                };
+                const counterRect = counter.getBoundingClientRect();
+                if (counterRect.top >= 0 && counterRect.top <= window.innerHeight && !counter.classList.contains('counted')) {
+                    updateCount();
+                    counter.classList.add('counted');
+                }
+            });
+        });
+
+        window.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
